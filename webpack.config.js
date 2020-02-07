@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -7,10 +7,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: {
-    main: './src/index.js',
+    main: './src/index.jsx',
   },
   output: {
-    filename: '[name].[contentHash].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -36,8 +36,8 @@ const config = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].[contentHash].css', chunkFilename: '[id].css' }),
-    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: '[name].css', chunkFilename: '[id].css' }),
+    // new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
