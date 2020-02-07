@@ -1,0 +1,23 @@
+:root {
+    --landscape-width: 25vw;
+    --main-background-color: hsl(240, 6%, 16%);
+    --main-text-color: hsla(0,0%,100%,.6);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    font-family: Whitney, Arial, sans-serif;
+  }
+  
+  .layout {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .app {
+    margin: auto;
+  }
