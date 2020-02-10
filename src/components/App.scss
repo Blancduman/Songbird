@@ -1,0 +1,75 @@
+body {
+  background-color: #222;
+  margin: 0;
+  min-width: 320px;
+  font-family: helvetica, Arial, sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  border: 7px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008966;
+}
+
+.container {
+  margin: 0 auto;
+}
+// /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 397px) {
+  .container {
+    width: 100%;
+  }
+
+  main {
+    display: block;
+    width: 100%;
+  }
+}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 398px) {
+  .container {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .main {
+    display: block;
+    width: 100%;
+  }
+}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 772px) {
+  .container {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .main {
+    display: flex;
+    margin: 25px 0 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 941px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+  }
+}

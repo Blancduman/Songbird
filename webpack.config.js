@@ -51,30 +51,26 @@ const config = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
+        options: {
+          failOnError: true,
+        },
       },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: path.resolve(__dirname, 'dist/css'),
-            },
-          },
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              config: {
-                path: path.resolve(__dirname, './postcss.config.js'),
-              },
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     {
+      //       loader: MiniCssExtractPlugin.loader,
+      //       options: {
+      //         publicPath: path.resolve(__dirname, 'dist/css'),
+      //       },
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //       options: { importLoaders: 1 },
+      //     },
+      //     'sass-loader',
+      //   ],
+      // },
       // {
       //   test: /\.(png|svg|jpe?g|gif)$/,
       //   use: [
@@ -87,6 +83,15 @@ const config = {
       //   ],
       // },
       {
+        test: /\.mp3$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/media',
+          },
+        },
+      },
+      {
         test: /\.(svg|png|jpe?g|gif)$/,
         use: {
           loader: 'file-loader',
@@ -94,6 +99,20 @@ const config = {
             outputPath: 'assets/images',
           },
         },
+      },
+      {
+        test: /\.(css|scss|sass)$/,
+        exclude: /\.module\.(css|scss|sass)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'sass-loader',
+        ],
       },
       // {
       //   test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -113,20 +132,20 @@ const config = {
       //     'sass-loader',
       //   ],
       // },
-      // {
-      //   test: /\.module\.(css|scss|sass)$/,
-      //   use: [
-      //     'style-loader',
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         importLoaders: 1,
-      //         modules: true,
-      //       },
-      //     },
-      //     'sass-loader',
-      //   ],
-      // },
+      {
+        test: /\.module\.(css|scss|sass)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+          'sass-loader',
+        ],
+      },
     ],
   },
   resolve: {
