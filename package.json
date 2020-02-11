@@ -24,7 +24,6 @@
   "homepage": "https://github.com/Blancduman/Songbird#readme",
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
-    "axios": "^0.19.2",
     "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

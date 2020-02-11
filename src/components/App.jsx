@@ -6,34 +6,11 @@ import Answers from './Answers';
 import ChoiseMainview from './ChoiseMainview';
 import Footer from './Footer';
 import EndGame from './EndGame';
-// import imageBird from '../api/flickr';
-// import audioBird from '../api/xenoCanto';
 import birdsData from '../data/birds';
 
 import './App.scss';
 
 import '@babel/polyfill';
-
-// const initialGameState = {
-//   score: 0,
-//   stage: 0,
-//   quizNames: [
-//     'Разминка',
-//     'Воробьиные',
-//     'Лесные птицы',
-//     'Певчие Птицы',
-//     'Хищные птицы',
-//     'Морские птицы',
-//   ],
-//   quizAnswers: [
-//     ['Ворон', 'Журавль', 'Ласточка', 'Козодой', 'Кукушка', 'Синица'],
-//     ['Воробей', 'Грач', 'Галка', 'Певчий дрозд', 'Сорока', 'Сойка'],
-//     ['Зяблик', 'Клёст', 'Горлица', 'Дятел', 'Удод', 'Стриж'],
-//     ['Жаворонок', 'Соловей', 'Скворец', 'Иволга', 'Свиристель', 'Щегол'],
-//     ['Орёл', 'Коршун', 'Лунь', 'Сокол', 'Ястреб', 'Филин'],
-//     ['Альбатрос', 'Олуша', 'Буревестник', 'Пеликан', 'Пингвин', 'Чайка'],
-//   ],
-// };
 
 function makeQuestion(arrayIndex) {
   if (arrayIndex > birdsData[0].birds.length - 1) {
@@ -62,14 +39,6 @@ function makeAnswers(arrayIndex) {
 }
 
 const initialGameState = {
-  // score: 0,
-  // currentAnswer: 0,
-  // selectedBird: null,
-  // stage: 0,
-  // isStageFinished: false,
-  // price: 5,
-  // birdsData,
-  // isFinished: false,
   score: 0,
   stage: 0,
   price: 5,
@@ -144,7 +113,6 @@ function reducer(state, action) {
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialGameState, init);
-  // const actionSelectAnswer = index => dispatch({ type: 'ANSWER', index });
   function renderQuiz() {
     return (
       <>
