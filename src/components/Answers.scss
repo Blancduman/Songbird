@@ -11,6 +11,7 @@ main {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    height: 100%;
 
     li {
       cursor: pointer;
@@ -29,11 +30,13 @@ main {
     }
     li.incorrect {
       background-color: #d62c1a;
-      border-bottom-color: #d62c1a;
+      // border-color: #d62c1a;
+      border-bottom-color: transparent;
     }
     li.correct {
-      border-bottom-color: #008966;
+      // border-color: #008966;
       background-color: #008966;
+      border-bottom-color: transparent;
     }
   }
 }

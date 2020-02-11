@@ -15,6 +15,7 @@ section {
       border-bottom-color: #ffffff30;
       border-bottom-style: groove;
       border-bottom-width: 1px;
+      padding-bottom: 15px;
     }
   }
 }
@@ -97,11 +98,12 @@ section {
       width: 100%;
 
       h3 {
-        width: 90%;
-        margin: 35px 2.5% 15px 2.5%;
+        width: 93%;
+        margin: 25px 2.5% 15px 2.5%;
       }
 
       audio {
+        width: 93%;
         margin-left: 2.5%;
         margin-top: 2.5%;
       }

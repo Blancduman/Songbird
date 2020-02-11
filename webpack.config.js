@@ -153,6 +153,7 @@ const config = {
   },
   devServer: {
     contentBase: './dist',
+    // port: 9000,
   },
   // plugins: [
   //   new HtmlWebpackPlugin({

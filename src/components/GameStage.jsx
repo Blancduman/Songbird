@@ -8,42 +8,26 @@ const GameStage = props => {
   const { stages, activeStage } = props;
 
   const stageStatusItems = stages.map((stage, index) => {
-    if (activeStage === index) return <li className="stage-status-item active">{stage}</li>;
-    if (activeStage > index) return <li className="stage-status-item passed">{stage}</li>;
-    return <li className="stage-status-item">{stage}</li>;
+    if (activeStage === index)
+      return (
+        <li key={stage} className="active">
+          {stage}
+        </li>
+      );
+    if (activeStage > index)
+      return (
+        <li key={stage} className="passed">
+          {stage}
+        </li>
+      );
+    return <li key={stage}>{stage}</li>;
   });
 
   return (
-    <nav className="margin-top-down">
-      <ul className="stage-status">{stageStatusItems}</ul>
+    <nav>
+      <ul>{stageStatusItems}</ul>
     </nav>
   );
-  // <Col
-  //   fluid="sm"
-  //   sm={{ size: 12, offset: 0 }}
-  //   md={{ size: 10, offset: 0 }}
-  //   lg={{ size: 8, offset: 0 }}
-  //   xl={{ size: 6, offset: 0 }}
-  // >
-  //   <ListGroup horizontal="md">{stagesPanel}</ListGroup>
-  // </Col>
-
-  // const stagesToPanel = stages.map((stage, index) => {
-  //   let styleClass = 'gamestage-item';
-  //   if (activeStage === stage) styleClass = `${styleClass} active`;
-
-  //   return (
-  //     <li className={`${styleClass} ${stage > index ? 'passed' : ''}`} key={stage}>
-  //       {stage}
-  //     </li>
-  //   );
-  // });
-
-  // return (
-  //   <nav className="gamestage clearfix">
-  //     <ul>{stagesToPanel}</ul>
-  //   </nav>
-  // );
 };
 
 GameStage.propTypes = {

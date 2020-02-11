@@ -1,6 +1,6 @@
 footer {
-  border: 1px solid #008966;
-  background-color: #008966;
+  border: 1px solid #303030;
+  background-color: #303030;
   text-align: center;
   height: 25px;
   margin-top: 25px;
@@ -8,7 +8,18 @@ footer {
   border-radius: 15px;
 }
 
+footer.enabled {
+  border: 1px solid #008966;
+  background-color: #008966;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 397px) {
+  footer {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 @media only screen and (min-width: 398px) {
 }
