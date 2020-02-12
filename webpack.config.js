@@ -11,7 +11,8 @@ const config = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    // path: path.resolve(__dirname, 'dist'),
+    path: __dirname,
     publicPath: '/',
   },
   optimization: {
