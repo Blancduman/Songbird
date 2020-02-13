@@ -1,0 +1,62 @@
+.endgame {
+  display: block;
+  background-color: #303030;
+  border-radius: 15px;
+
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
+  p {
+    overflow-wrap: break-word;
+    text-align: left;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 397px) {
+  .endgame {
+    width: 90%;
+    margin: 0 5%;
+    display: block;
+  }
+  h1 {
+    margin: 25px 0 25px 0;
+    padding-top: 25px;
+  }
+  p {
+    padding: 0 5% 5% 5%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 398px) {
+  .endgame {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  h1 {
+    margin: 25px 0 25px 0;
+    padding-top: 25px;
+  }
+  p {
+    padding: 0 5% 5% 5%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 772px) {
+  .endgame {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  h1 {
+    margin: 25px 0;
+    width: 90%;
+    padding-top: 25px;
+  }
+  p {
+    padding: 0 5% 5% 5%;
+    margin: 0;
+  }
+}
